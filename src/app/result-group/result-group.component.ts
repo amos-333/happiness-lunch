@@ -12,4 +12,6 @@ export class ResultGroupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+isActive:String='silver'
+
 }

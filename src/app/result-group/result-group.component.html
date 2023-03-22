@@ -3,111 +3,120 @@
     <div class="flex flex-col gap-10 items-center px-20 relative">
         <h1 class="font-bold text-3xl">GROUP</h1>
         <div class="py-2 mx-10 shadow-full rounded-lg flex gap-10 w-full justify-evenly sticky top-0 bg-white z-40">
-            <div class="h-36 w-36 flex items-center justify-center rounded-xl active:bg-gradient-to-t from-black to-gray-50 cursor-pointer ">
+            <div (click)="isActive = 'silver'" [ngClass]="{'bg-gradient-to-t': (isActive ==='silver')}" class="h-36 w-36 flex items-center justify-center rounded-xl  from-black to-gray-50 cursor-pointer ">
                 <img class="h-28 w-28" src="../../assets/silver.png" alt="">
             </div>
-            <div class="h-36 w-36 flex items-center justify-center rounded-xl active:bg-gradient-to-t from-black to-gray-50 cursor-pointer ">
+            <div (click)="isActive = 'gold'" [ngClass]="{'bg-gradient-to-t': (isActive ==='gold')}" class="h-36 w-36 flex items-center justify-center rounded-xl  from-black to-gray-50 cursor-pointer ">
                 <img class="h-28 w-28" src="../../assets/gold.png" alt="">
             </div>
-            <div class="h-36 w-36 flex items-center justify-center rounded-xl active:bg-gradient-to-t from-black to-gray-50 cursor-pointer ">
+            <div (click)="isActive = 'platinum'" [ngClass]="{'bg-gradient-to-t': (isActive ==='platinum')}" class="h-36 w-36 flex items-center justify-center rounded-xl  from-black to-gray-50 cursor-pointer ">
                 <img class="h-28 w-28" src="../../assets/platinum.png" alt="">
             </div>
-            <div class="h-36 w-36 flex items-center justify-center rounded-xl active:bg-gradient-to-t from-black to-gray-50 cursor-pointer ">
+            <div (click)="isActive = 'diamond'" [ngClass]="{'bg-gradient-to-t': (isActive ==='diamond')}" class="h-36 w-36 flex items-center justify-center rounded-xl  from-black to-gray-50 cursor-pointer ">
                 <img class="h-28 w-28" src="../../assets/diamond.png" alt="">
             </div>
         </div>
 
         <!-- silver -->
-        <div class="flex flex-col gap-8 mt-4  w-full items-center">
+        <div *ngIf="isActive === 'silver'" class="flex flex-col gap-8 mt-4  w-full items-center">
             <h2 class="text-2xl font-bold">SILVER CLUB</h2>
             <table class="table-fixed w-full">
                 <thead class="sticky top-[158px]">
                     <tr class="bg-black text-white h-14 text-xl font-semibold text-left ">
-                        <th>Rank</th>
-                        <th>Name</th>
-                        <th>Class</th>
-                        <th>Smiles</th>
+                        <th class="text-center">Rank</th>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Class</th>
+                        <th class="text-center">Smiles</th>
                     </tr>
                 </thead>
                 <tbody class="overflow-y-auto">
                     <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
-                        <td>1</td>
-                        <td>arun</td>
-                        <td>bca</td>
-                        <td>100</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
                     </tr>
                     <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
-                        <td>1</td>
-                        <td>arun</td>
-                        <td>bca</td>
-                        <td>100</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
                     </tr>
                     <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
-                        <td>1</td>
-                        <td>arun</td>
-                        <td>bca</td>
-                        <td>100</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
                     </tr>
                     <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
-                        <td>1</td>
-                        <td>arun</td>
-                        <td>bca</td>
-                        <td>100</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
                     </tr>
                     <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
-                        <td>1</td>
-                        <td>arun</td>
-                        <td>bca</td>
-                        <td>100</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
                     </tr>
                     <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
-                        <td>1</td>
-                        <td>arun</td>
-                        <td>bca</td>
-                        <td>100</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
                     </tr>
                     <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
-                        <td>1</td>
-                        <td>arun</td>
-                        <td>bca</td>
-                        <td>100</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
                     </tr>
                     <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
-                        <td>1</td>
-                        <td>arun</td>
-                        <td>bca</td>
-                        <td>100</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
                     </tr>
                     <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
-                        <td>1</td>
-                        <td>arun</td>
-                        <td>bca</td>
-                        <td>100</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
                     </tr>
                     <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
-                        <td>1</td>
-                        <td>arun</td>
-                        <td>bca</td>
-                        <td>100</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
                     </tr>
                     <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
-                        <td>1</td>
-                        <td>arun</td>
-                        <td>bca</td>
-                        <td>100</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
                     </tr>
                     <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
-                        <td>1</td>
-                        <td>arun</td>
-                        <td>bca</td>
-                        <td>100</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
                     </tr>
+                    <tr class="bg-gray-200 text-black h-14 font-semibold text-xl">
+                        <td class="text-center">1</td>
+                        <td class="text-center">arun</td>
+                        <td class="text-center">bca</td>
+                        <td class="text-center">100</td>
+                    </tr>
+
+
+
                 </tbody>
             </table>
         </div>
 
         <!-- gold -->
-        <div class="flex flex-col gap-8 mt-4  w-full items-center">
+        <div *ngIf="isActive === 'gold'" class="flex flex-col gap-8 mt-4  w-full items-center">
             <h2 class="text-2xl font-bold">GOLD CLUB</h2>
             <table class="table-fixed w-full">
                 <thead class="sticky top-[158px]">
@@ -196,7 +205,7 @@
         </div>
 
         <!-- platinum -->
-        <div class="flex flex-col gap-8 mt-4  w-full items-center">
+        <div *ngIf="isActive === 'platinum'" class="flex flex-col gap-8 mt-4  w-full items-center">
             <h2 class="text-2xl font-bold">PLATINUM CLUB</h2>
             <table class="table-fixed w-full">
                 <thead class="sticky top-[158px]">
@@ -285,7 +294,7 @@
         </div>
 
         <!-- diamond -->
-        <div class="flex flex-col gap-8 mt-4  w-full items-center">
+        <div *ngIf="isActive === 'diamond'" class="flex flex-col gap-8 mt-4  w-full items-center">
             <h2 class="text-2xl font-bold">DIAMOND CLUB</h2>
             <table class="table-fixed w-full">
                 <thead class="sticky top-[158px]">
