@@ -12,5 +12,5 @@ export class ResultComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  isActive:String='silver'
 }

@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     width: 280px;
-    height: 295px;
+    height: 225px;
     filter: blur(2px) ;
   }
   .swiper-slide-active{
