@@ -1,0 +1,14 @@
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  width: 280px;
+  height: 295px;
+  filter: blur(4px) brightness(.8) ;
+}
+.swiper-slide-active{
+ filter: blur(0px) brightness(1) ;
+ transform: scale(1.2);
+}
+.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
