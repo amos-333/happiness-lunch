@@ -64,8 +64,6 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "host":"0.0.0.0",
-              "port":4200,
               "browserTarget": "happines-lunch:build:production"
             },
             "development": {
