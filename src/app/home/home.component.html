@@ -1,97 +1,56 @@
-<div class="h-screen bg-white overflow-y-hidden">
-  <app-navbar></app-navbar>
-  <div class="flex flex-col items-center gap-6 mt-6 md:mt-0">
-    <span
-      ><img class="md:h-40 h-24" src="../../assets/campaign-logo.png" alt=""
-    /></span>
-    <div
-      class="rolls relative md:text-6xl text-3xl flex gap-1 md:gap-2 ml-2 font-medium font-bebas items-center"
-    >
-      <span *ngIf="totalArray.length === 0">Loading</span>
-      <div *ngIf="!(totalArray.length === 0)">
-        <span *ngFor="let item of totalArray">{{ item }}</span>
-        <span>+</span>
-      </div>
-    </div>
-    <span class="font-bold tracking-widest text-sm md:text-lg">
-      <h1 class="font- text-[#6A6969]">THOUSAND HAPPY FACES</h1>
-    </span>
-    <div class="flex gap-3 md:gap-8">
-      <a routerLink="/result-group">
-        <button
-          class="pt-2 pb-2 px-8 text-white font-semibold text-sm md:text-lg bg-blue-500 rounded-full flex items-center gap-2"
-        >
-          <p class="md:mb-1">GROUP</p>
-          <span class="">
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 15 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.26867 13.5369L13.5371 7.26844L7.26867 1"
-                stroke="white"
-                stroke-width="1.1875"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M1.00022 7.26843H13.5371"
-                stroke="white"
-                stroke-width="1.1875"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </span>
-        </button>
-      </a>
-      <a routerLink="/result">
-        <button
-          class="py-2 px-4 text-white font-semibold text-sm md:text-lg bg-blue-500 rounded-full flex items-center gap-2"
-        >
-          INDIVIDUAL
-          <span class="mt-1">
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 15 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.26867 13.5369L13.5371 7.26844L7.26867 1"
-                stroke="white"
-                stroke-width="1.1875"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M1.00022 7.26843H13.5371"
-                stroke="white"
-                stroke-width="1.1875"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </span>
-        </button>
-      </a>
-    </div>
-    <div class="swiper mySwiper w-full">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide h-[195px] w-[250px] md:h-[225px] md:w-[280px]">
-          <img class="" src="../../assets/images/Rectangle1.png" alt="" />
+<div class="h-[100svh] bg-white overflow-y-hidden">
+    <app-navbar></app-navbar>
+    <div class="flex flex-col items-center mt-6 md:mt-0 backgroungImg">
+        <span><img class="md:h-40 h-24" src="../../assets/campaign-logo.png" alt=""></span>
+        <div class="rolls relative md:text-6xl text-3xl flex gap-1 md:gap-2 ml-2 font-medium font-bebas items-center mt-8">
+            <span *ngIf="totalArray.length === 0">Loading</span>
+            <div *ngIf="!(totalArray.length === 0)">
+              <span *ngFor="let item of totalArray">{{ item }}</span>
+              <span>+</span>
+            </div>
         </div>
-        <div class="swiper-slide h-[195px] w-[250px] md:h-[225px] md:w-[280px]">
-          <img src="../../assets/images/Rectangle 2.png" alt="" />
+        <span class="font-bold tracking-widest text-sm md:text-lg">
+            <h1 class="font- text-[#6A6969]">THOUSAND HAPPY FACES</h1>
+        </span>
+        <div class="flex gap-3 md:gap-8 mt-8">
+            <a routerLink="/result-group">
+                <button
+                    class="pt-2 pb-2 px-8 text-white font-semibold text-sm md:text-lg bg-blue-500 rounded-full flex items-center gap-2"><p class="md:mb-1">GROUP</p>
+                    <span class="">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.26867 13.5369L13.5371 7.26844L7.26867 1" stroke="white" stroke-width="1.1875"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1.00022 7.26843H13.5371" stroke="white" stroke-width="1.1875"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span></button>
+            </a>
+            <a routerLink="/result">
+                <button
+                    class="py-2 px-4 text-white font-semibold text-sm md:text-lg bg-blue-500 rounded-full flex items-center gap-2">INDIVIDUAL
+                    <span class="mt-1">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.26867 13.5369L13.5371 7.26844L7.26867 1" stroke="white" stroke-width="1.1875"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1.00022 7.26843H13.5371" stroke="white" stroke-width="1.1875"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span></button>
+            </a>
         </div>
-        <div class="swiper-slide h-[195px] w-[250px] md:h-[225px] md:w-[280px]">
-          <img src="../../assets/images/Rectangle3.png" alt="" />
-        </div>
-      </div>
+        <div class="swiper mySwiper w-full mt-8">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide h-[195px] w-[250px] md:h-[225px] md:w-[280px]">
+                <img class="" src="../../assets/images/Rectangle1.png" alt="">
+              </div>
+              <div class="swiper-slide h-[195px] w-[250px] md:h-[225px] md:w-[280px]">
+                <img src="../../assets/images/Rectangle 2.png" alt="">
+              </div>
+              <div class="swiper-slide h-[195px] w-[250px] md:h-[225px] md:w-[280px]">
+                <img src="../../assets/images/Rectangle3.png" alt="">
+              </div>
+            </div>
+          </div>
+          
     </div>
-  </div>
-</div>
+    

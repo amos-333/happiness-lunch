@@ -10,8 +10,14 @@
   .swiper-slide-active{
    filter: blur(0px) ;
   }
-  
 
+  @media only screen and (min-width: 1024px){
+  .backgroungImg{
+    background-image: url("../../assets/happy.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  }
   
  .rolls span {
     display:inline-block;
