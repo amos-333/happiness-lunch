@@ -10,7 +10,11 @@
   .swiper-slide-active{
    filter: blur(0px) ;
   }
-  
+  .backgroungImg{
+    background-image: url("../../assets/happy.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
   
  .rolls span {

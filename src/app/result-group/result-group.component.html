@@ -1,7 +1,16 @@
 <div class="h-screen">
     <app-navbar></app-navbar>
-    <div class="flex flex-col gap-10 items-center px-4 md:px-20 relative">
-        <h1 class="font-bold md:text-3xl text-2xl">GROUP</h1>
+    <div class="flex flex-col gap-5 md:gap-10 items-center px-4 md:px-20 relative">
+        <div class="grid grid-cols-3  justify-items-stretch w-full items-stretch">
+            <a routerLink="/" class="justify-self-start self-center">
+                <svg class="md:h-8 md:w-8 h-5 w-5" width="" height="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.57 5.92969L3.5 11.9997L9.57 18.0697" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.5019 12H3.67188" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </a>
+            <h1 class="font-bold md:text-3xl text-xl justify-self-center">GROUP</h1>
+            <div class="invisible">hello</div>
+        </div>
         <div class=" mx-10 shadow-full rounded-lg grid grid-cols-4 md:gap- w-full justify-evenly sticky top-0 bg-white z-40  ">
             <div (click)="isActive = 'silver'" [ngClass]="{'bg-gradient-to-t': (isActive ==='silver')}" class="md:h-36 h-20 w-full flex items-center justify-center rounded-l-lg  from-black to-gray-50 cursor-pointer ">
                 <img class="md:h-28 h-16 md:w-28" src="../../assets/silver.png" alt="">
@@ -18,8 +27,8 @@
         </div>
   
         <!-- silver -->
-        <div *ngIf="isActive === 'silver'" class="flex flex-col gap-8 mt-4  w-full items-center">
-            <h2 class="md:text-2xl text-xl font-bold">SILVER CLUB</h2>
+        <div *ngIf="isActive === 'silver'" class="flex flex-col gap-4 md:gap-8 md:mt-4  w-full items-center">
+            <h2 class="md:text-2xl  font-bold">SILVER CLUB</h2>
             <table class="table-fixed w-full text-left">
                 <thead class="sticky md:top-[143px] top-[76px]">
                     <tr class="bg-black text-white h-14 md:text-xl text-base font-semibold  ">
@@ -116,8 +125,8 @@
         </div>
   
         <!-- gold -->
-        <div *ngIf="isActive === 'gold'" class="flex flex-col gap-8 mt-4  w-full items-center">
-            <h2 class="text-2xl font-bold">GOLD CLUB</h2>
+        <div *ngIf="isActive === 'gold'" class="flex flex-col gap-4 md:gap-8 md:mt-4  w-full items-center">
+            <h2 class="md:text-2xl font-bold">GOLD CLUB</h2>
             <table class="table-fixed w-full text-left">
               <thead class="sticky md:top-[143px] top-[76px]">
                   <tr class="bg-black text-white h-14 md:text-xl text-base font-semibold  ">
@@ -214,8 +223,8 @@
         </div>
   
         <!-- platinum -->
-        <div *ngIf="isActive === 'platinum'" class="flex flex-col gap-8 mt-4  w-full items-center">
-            <h2 class="text-2xl font-bold">PLATINUM CLUB</h2>
+        <div *ngIf="isActive === 'platinum'" class="flex flex-col gap-4 md:gap-8 md:mt-4  w-full items-center">
+            <h2 class="md:text-2xl font-bold">PLATINUM CLUB</h2>
             <table class="table-fixed w-full text-left">
               <thead class="sticky md:top-[143px] top-[76px]">
                   <tr class="bg-black text-white h-14 md:text-xl text-base font-semibold  ">
@@ -312,8 +321,8 @@
         </div>
   
         <!-- diamond -->
-        <div *ngIf="isActive === 'diamond'" class="flex flex-col gap-8 mt-4  w-full items-center">
-            <h2 class="text-2xl font-bold">DIAMOND CLUB</h2>
+        <div *ngIf="isActive === 'diamond'" class="flex flex-col gap-4 md:gap-8 md:mt-4  w-full items-center">
+            <h2 class="md:text-2xl font-bold">DIAMOND CLUB</h2>
             <table class="table-fixed w-full text-left">
               <thead class="sticky md:top-[143px] top-[76px]">
                   <tr class="bg-black text-white h-14 md:text-xl text-base font-semibold  ">
