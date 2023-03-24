@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 import Swiper from 'swiper';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
@@ -8,11 +9,15 @@ register();
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  constructor(private api: ApiService) {
+setTimeout(() => {
 
-  constructor() { }
+  this.getData();
+}, 30000);
+  }
 
   ngOnInit() {
     const mySwiper = new Swiper('.mySwiper', {
@@ -36,4 +41,20 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  total: any = 0;
+  totalArray:any=[]
+
+  getData() {
+    this.api.getData().subscribe((res) => {
+      console.log(res.values);
+      this.total=res.values[res.values.length-1]
+      console.log(this.total);
+this.splitTotal()
+    });
+  }
+
+splitTotal(){
+  this.totalArray= Array.from(String(this.total[this.total.length - 1]), Number);
+console.log(this.totalArray)
+}
 }

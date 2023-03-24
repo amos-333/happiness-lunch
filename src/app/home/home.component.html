@@ -3,12 +3,11 @@
     <div class="flex flex-col items-center mt-6 md:mt-0 md:backgroungImg">
         <span><img class="md:h-40 h-24" src="../../assets/campaign-logo.png" alt=""></span>
         <div class="rolls relative md:text-6xl text-3xl flex gap-1 md:gap-2 ml-2 font-medium font-bebas items-center mt-8">
-            <span>2</span>
-            <span>3</span>
-            <span>8</span>
-            <span>9</span>
-            <span>9</span>
-           <span>+</span>
+            <span *ngIf="totalArray.length === 0">Loading</span>
+            <div *ngIf="!(totalArray.length === 0)">
+              <span *ngFor="let item of totalArray">{{ item }}</span>
+              <span>+</span>
+            </div>
         </div>
         <span class="font-bold tracking-widest text-sm md:text-lg">
             <h1 class="font- text-[#6A6969]">THOUSAND HAPPY FACES</h1>
@@ -54,4 +53,4 @@
           </div>
           
     </div>
-</div>
+    
