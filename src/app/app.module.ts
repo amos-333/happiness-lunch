@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ResultComponent } from './result/result.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ResultGroupComponent } from './result-group/result-group.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,10 @@ import { ResultGroupComponent } from './result-group/result-group.component';
     HomeComponent,
     ResultComponent,
     NavbarComponent,
-    ResultGroupComponent
+    ResultGroupComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
