@@ -13,9 +13,9 @@ register();
 })
 export class HomeComponent implements OnInit {
   constructor(private api: ApiService) {
-    setTimeout(() => {
+    
       this.getData();
-    }, 30000);
+
   }
 
   ngOnInit() {
