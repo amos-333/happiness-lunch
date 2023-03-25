@@ -8,6 +8,7 @@ import { ResultComponent } from './result/result.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ResultGroupComponent } from './result-group/result-group.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DonateComponent } from './donate/donate.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     ResultComponent,
     NavbarComponent,
     ResultGroupComponent,
+    DonateComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
