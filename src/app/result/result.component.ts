@@ -24,7 +24,7 @@ export class ResultComponent implements OnInit {
   getData() {
     this.api.getData().subscribe((res) => {
       console.log(res.values);
-      res.values.forEach((element: any) => {
+      res.values.slice(0, res.values.length - 1).forEach((element: any) => {
         if (element[6] >= 100 && element[6] < 200) {
           this.sliverMem.push(element);
         } else if (element[6] >= 200 && element[6] < 300) {
