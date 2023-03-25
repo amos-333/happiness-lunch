@@ -9,7 +9,7 @@ export class ApiService {
 
   getData() {
     return this.http.get<any>(
-      'https://sheets.googleapis.com/v4/spreadsheets/1Acfn6Jl-26V4IhxPTUCrq9yJs3889kNI_8tDUDmYzS0/values/sheet1?key=AIzaSyAVBZVKt7OxclSr1cf4YZq02-cosBozUCY'
+      'https://sheets.googleapis.com/v4/spreadsheets/1NLgawA2IAuX1DyT1YH1rt7mp4refIKKfq5toR8zDjhs/values/ALLINONE?key=AIzaSyAVBZVKt7OxclSr1cf4YZq02-cosBozUCY'
     );
   }
 }
