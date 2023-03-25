@@ -32,93 +32,16 @@
       <thead class="sticky md:top-[143px] top-[76px]">
           <tr class="bg-black text-white h-14 md:text-xl text-base font-semibold  ">
               <th class="text-center">Rank</th>
-              <th class="text-center">Name</th>
               <th class="text-center">Class</th>
               <th class="text-center">Smiles</th>
           </tr>
       </thead>
       <tbody class="overflow-y-auto">
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
+          <tr *ngFor="let item of silverClub;let i =index" class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
+            <td class="text-center">{{i+ 1}}</td>
+            <td class="text-center">{{item[0]}}</td>
+            <td class="text-center">{{item[1]}}</td>
           </tr>
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
-          </tr>
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
-          </tr>
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
-          </tr>
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
-          </tr>
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
-          </tr>
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
-          </tr>
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
-          </tr>
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
-          </tr>
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
-          </tr>
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
-          </tr>
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
-          </tr>
-          <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-              <td class="text-center">1</td>
-              <td class="text-center">arun</td>
-              <td class="text-center">bca</td>
-              <td class="text-center">100</td>
-          </tr>
-
-
-
       </tbody>
   </table>
 </div>
@@ -130,94 +53,17 @@
     <thead class="sticky md:top-[143px] top-[76px]">
         <tr class="bg-black text-white h-14 md:text-xl text-base font-semibold  ">
             <th class="text-center">Rank</th>
-            <th class="text-center">Name</th>
             <th class="text-center">Class</th>
             <th class="text-center">Smiles</th>
         </tr>
     </thead>
     <tbody class="overflow-y-auto">
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-
-
-
-    </tbody>
+      <tr *ngFor="let item of goldClub ;let i =index" class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
+          <td class="text-center">{{i+ 1}}</td>
+          <td class="text-center">{{item[0]}}</td>
+          <td class="text-center">{{item[1]}}</td>
+      </tr>
+  </tbody>
 </table>
 </div>
 
@@ -228,94 +74,18 @@
     <thead class="sticky md:top-[143px] top-[76px]">
         <tr class="bg-black text-white h-14 md:text-xl text-base font-semibold  ">
             <th class="text-center">Rank</th>
-            <th class="text-center">Name</th>
+
             <th class="text-center">Class</th>
             <th class="text-center">Smiles</th>
         </tr>
     </thead>
     <tbody class="overflow-y-auto">
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-
-
-
-    </tbody>
+      <tr *ngFor="let item of platinumClub ;let i =index" class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
+          <td class="text-center">{{i+ 1}}</td>
+          <td class="text-center">{{item[0]}}</td>
+          <td class="text-center">{{item[1]}}</td>
+      </tr>
+  </tbody>
 </table>
 </div>
 
@@ -326,94 +96,18 @@
     <thead class="sticky md:top-[143px] top-[76px]">
         <tr class="bg-black text-white h-14 md:text-xl text-base font-semibold  ">
             <th class="text-center">Rank</th>
-            <th class="text-center">Name</th>
+
             <th class="text-center">Class</th>
             <th class="text-center">Smiles</th>
         </tr>
     </thead>
     <tbody class="overflow-y-auto">
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-        <tr class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
-            <td class="text-center">1</td>
-            <td class="text-center">arun</td>
-            <td class="text-center">bca</td>
-            <td class="text-center">100</td>
-        </tr>
-
-
-
-    </tbody>
+      <tr *ngFor="let item of diamondClub ;let i =index" class="bg-gray-200 text-black h-14 font-semibold md:text-xl">
+          <td class="text-center">{{i+ 1}}</td>
+          <td class="text-center">{{item[0]}}</td>
+          <td class="text-center">{{item[1]}}</td>
+      </tr>
+  </tbody>
 </table>
 </div>
 
