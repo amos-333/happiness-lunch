@@ -71,27 +71,28 @@ export class ResultGroupComponent implements OnInit {
       //filteringTheArray
       this.filterData = this.jsonData.map((row: any) => {
         return {
-          DEPT_YEAR: row.DEPT_YEAR,
+          DEPT: row.DEPT,
           'LUNCH COUNT': row['LUNCH COUNT'],
         };
       });
-      console.log(this.filterData.slice(0, this.filterData.length - 1));
+      // console.log(this.filterData.slice(0, this.filterData.length - 1));
       //findingTheCount
       this.filterData
         .slice(0, this.filterData.length - 1)
         .forEach((row: any) => {
-          if (!this.classCount[row.DEPT_YEAR]) {
-            this.classCount[row.DEPT_YEAR] = Math.round(row['LUNCH COUNT']);
+          if (!this.classCount[row.DEPT]) {
+            this.classCount[row.DEPT] = Math.round(row['LUNCH COUNT']);
             return;
           }
-          this.classCount[row.DEPT_YEAR] =
-            Math.round(this.classCount[row.DEPT_YEAR]) +
-            Math.round(row['LUNCH COUNT']);
+          this.classCount[row.DEPT] =
+            Math.round(this.classCount[row.DEPT]) +
+            (row['LUNCH COUNT'] === undefined? 0 : Math.round(row['LUNCH COUNT']))
+// console.log(row['LUNCH COUNT'] === undefined? 0 : Math.round(row['LUNCH COUNT']))
         });
-      console.log(this.classCount);
+      // console.log(this.classCount);
       const keys: any = Object.keys(this.classCount);
       keys.forEach((row: any) => {
-        console.log(this.classCount[row]);
+        // console.log(this.classCount[row]);
         if (this.classCount[row] >= 300 && this.classCount[row] < 600) {
           this.silverClub.push([row, this.classCount[row]]);
         } else if (this.classCount[row] >= 600 && this.classCount[row] < 750) {
@@ -102,16 +103,16 @@ export class ResultGroupComponent implements OnInit {
           this.platinumClub.push([row, this.classCount[row]]);
         }
       });
-      console.log(this.silverClub);
-      console.log(this.goldClub);
-      console.log(this.diamondClub);
-      console.log(this.platinumClub);
-this.keys(this.goldClub)
+//       console.log(this.silverClub);
+//       console.log(this.goldClub);
+//       console.log(this.diamondClub);
+//       console.log(this.platinumClub);
+// this.keys(this.goldClub)
     });
   }
 
 public keys(obj:any):any{
-console.log(Object.keys(obj))
+// console.log(Object.keys(obj))
 return       Object.keys(obj)
 }
 
