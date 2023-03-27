@@ -7,7 +7,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./result-group.component.css'],
 })
 export class ResultGroupComponent implements OnInit {
-[x: string]: any;
+  [x: string]: any;
   constructor(private api: ApiService) {
     this.getData();
   }
@@ -86,8 +86,10 @@ export class ResultGroupComponent implements OnInit {
           }
           this.classCount[row.DEPT] =
             Math.round(this.classCount[row.DEPT]) +
-            (row['LUNCH COUNT'] === undefined? 0 : Math.round(row['LUNCH COUNT']))
-// console.log(row['LUNCH COUNT'] === undefined? 0 : Math.round(row['LUNCH COUNT']))
+            (row['LUNCH COUNT'] === undefined
+              ? 0
+              : Math.round(row['LUNCH COUNT']));
+          // console.log(row['LUNCH COUNT'] === undefined? 0 : Math.round(row['LUNCH COUNT']))
         });
       // console.log(this.classCount);
       const keys: any = Object.keys(this.classCount);
@@ -96,26 +98,32 @@ export class ResultGroupComponent implements OnInit {
         if (this.classCount[row] >= 300 && this.classCount[row] < 600) {
           this.silverClub.push([row, this.classCount[row]]);
         } else if (this.classCount[row] >= 600 && this.classCount[row] < 750) {
-          this.goldClub.push( [row, this.classCount[row]] );
+          this.goldClub.push([row, this.classCount[row]]);
         } else if (this.classCount[row] >= 750 && this.classCount[row] < 1000) {
           this.diamondClub.push([row, this.classCount[row]]);
         } else if (this.classCount[row] >= 1000) {
           this.platinumClub.push([row, this.classCount[row]]);
         }
       });
-//       console.log(this.silverClub);
-//       console.log(this.goldClub);
-//       console.log(this.diamondClub);
-//       console.log(this.platinumClub);
-// this.keys(this.goldClub)
+
+      this.sortArray(this.silverClub);
+      this.sortArray(this.goldClub);
+      this.sortArray(this.diamondClub);
+      this.sortArray(this.platinumClub);
+      console.log(this.silverClub);
+      console.log(this.goldClub);
+      console.log(this.diamondClub);
+      console.log(this.platinumClub);
+      // this.keys(this.goldClub)
     });
   }
 
-public keys(obj:any):any{
-// console.log(Object.keys(obj))
-return       Object.keys(obj)
-}
+  public keys(obj: any): any {
+    // console.log(Object.keys(obj))
+    return Object.keys(obj);
+  }
 
-
-
+  sortArray(array: any) {
+    array.sort((a: any, b: any) => b[1] - a[1]);
+  }
 }

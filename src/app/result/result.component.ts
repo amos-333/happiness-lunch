@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 
-
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
-  styleUrls: ['./result.component.css']
+  styleUrls: ['./result.component.css'],
 })
 export class ResultComponent implements OnInit {
-
   constructor(private api: ApiService) {
     this.getData();
   }
@@ -24,7 +22,7 @@ export class ResultComponent implements OnInit {
   getData() {
     this.api.getData().subscribe((res) => {
       console.log(res.values);
-console.log(res.values.slice(0, res.values.length - 1))
+      console.log(res.values.slice(0, res.values.length - 1));
       res.values.slice(0, res.values.length - 1).forEach((element: any) => {
         if (element[6] >= 100 && element[6] < 200) {
           this.sliverMem.push(element);
@@ -36,10 +34,18 @@ console.log(res.values.slice(0, res.values.length - 1))
           this.platinumMem.push(element);
         }
       });
+      this.sortArray(this.sliverMem);
+      this.sortArray(this.goldMem);
+      this.sortArray(this.diamondMem);
+      this.sortArray(this.platinumMem);
       console.log(this.sliverMem);
       console.log(this.goldMem);
       console.log(this.diamondMem);
       console.log(this.platinumMem);
     });
+  }
+
+  sortArray(array: any) {
+    array.sort((a: any, b: any) => b[6] - a[6]);
   }
 }
